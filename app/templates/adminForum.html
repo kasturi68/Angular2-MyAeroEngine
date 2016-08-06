@@ -1,0 +1,52 @@
+<div class="forumScreen">
+<div class="ml20">
+ <div class="font30">
+<div class="pd18">My Aero Engine Forum</div>
+</div>
+<div class="forumArea">
+<div class="postarea" >
+<form (ngSubmit)="formSubmit()" style="margin-left:30px;">
+  <div>
+    <h3>New Post</h3>
+    <h3>Post Title :</h3> <textarea rows="2" cols="36" [(ngModel)]="postTitle"></textarea>
+    <h3>Post Description :</h3> <textarea rows="4" cols="72" [(ngModel)]="postDesc"></textarea>
+  </div><br>
+  <button type="submit" class="btn-default btn">Create a new Post</button>
+</form>
+</div>
+</div>
+</div>
+<div class="forumScreen">
+<div class="page_content_forum">
+ <div class="ml20">
+<div class="font30 mtb20">Message Boards</div>
+<div class="border_top"></div>
+
+</div>
+<div class="forumArea">
+
+<div *ngFor="#item of posts">
+<div class="col">
+ 
+  <div class="col-md-9">
+<h3>  <a [routerLink]="['AeroEnginePostDetailsPage',{id:item.postID}]" 
+style="font-family:arial">{{item.postTitle}}</a></h3>
+<span style="font-size: small;font-style: italic;">Posted on {{ item.postedDateAndTime}} by {{item.postedBy}}</span>
+  </div>
+ <div class="col-md-3 posts"><div class="ml40" *ngIf="item.comments">{{item.comments.length}}</div><div class="ml40" *ngIf="!item.comments">0</div>
+  <div class="clear_fix"></div>
+  <div class="mtb10">Comments</div>
+  </div>
+</div>
+<div class="clear_fix"></div>
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
