@@ -1,0 +1,22 @@
+
+	
+<div class="light_grey">
+<div class="loginScreen">
+<div class="page_content">
+<h3>User Login</h3>
+<form (ngSubmit)="formSubmit()">
+	<div class="form-group">
+		<label style="margin-bottom:5px;" for="uname">Username:</label>
+		<div style="padding-bottom:5px;"><input id="username" type="text" maxlength="64" style="height:35px;font-weight:Strong;width:200px;margin-top:7px;" [(ngModel)]="data.username"><br>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="pwd">Password:</label>
+		<div style="padding-bottom:5px;"><input id="password" type="password" maxlength="24" style="height:35px;margin-top:10px;width:200px; font-weight:Strong; font-size:14px; background: #f6f6f6; border: 1px solid #ccc;" [(ngModel)]="data.password">
+		</div>
+	</div>
+	<button type="submit" class="btn-default btn">Login</button>
+</form>
+</div>
+</div>
+</div>
